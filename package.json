@@ -1,0 +1,13 @@
+{
+  "name": "lumera-functions",
+  "description": "Cloud Functions for Luméra by Maryam — AI chat + product copy proxy",
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-functions": "^5.0.0",
+    "firebase-admin": "^12.0.0"
+  },
+  "private": true
+}

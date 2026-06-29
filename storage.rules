@@ -1,0 +1,15 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Must match ADMIN_EMAIL in js/firebase-config.js and firestore.rules.
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == "you@example.com";
+    }
+
+    match /product-images/{fileName} {
+      allow read: if true;
+      allow write: if isAdmin() && request.resource.size < 5 * 1024 * 1024; // 5MB cap
+    }
+  }
+}

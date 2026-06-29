@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // IMPORTANT: replace with the exact same email you set as ADMIN_EMAIL
+    // in js/firebase-config.js. Must be lowercase.
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == "you@example.com";
+    }
+
+    // Anyone (including signed-out visitors) can read the product catalog.
+    // Only the admin account can add, edit, or delete products.
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Each signed-in user can create their own profile doc and read it back.
+    // Nobody can read or modify another user's profile.
+    match /users/{docId} {
+      allow create: if request.auth != null;
+      allow read, update, delete: if request.auth != null && resource.data.uid == request.auth.uid;
+    }
+  }
+}

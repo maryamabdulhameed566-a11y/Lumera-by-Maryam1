@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Luméra by Maryam</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Lora:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Luméra by Maryam logo" />
+        <span class="brand-text">
+          <span class="name">Luméra</span><br/>
+          <span class="by">BY MARYAM</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">View shop</a>
+        <a href="#" data-logout>Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="admin-gate" class="gate-screen" style="display:none;"></div>
+
+  <main id="admin-content" class="admin-shell" style="display:none;">
+    <div class="admin-head">
+      <h1>Manage products</h1>
+      <p class="label-caps">Signed in as admin</p>
+    </div>
+
+    <div class="admin-grid">
+      <div class="admin-panel">
+        <h2 id="form-title">Add a product</h2>
+        <form id="product-form">
+          <div class="field">
+            <label for="p-name">Product name</label>
+            <input type="text" id="p-name" name="name" required />
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="p-category">Category <span style="color:var(--ink-soft);text-transform:none;font-weight:400;">(auto-detected)</span></label>
+              <select id="p-category" name="category"></select>
+            </div>
+            <div class="field">
+              <label for="p-price">Price (reference only)</label>
+              <input type="text" id="p-price" name="price" placeholder="e.g. 24.99" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="p-link">Amazon affiliate link</label>
+            <input type="url" id="p-link" name="affiliateLink" placeholder="https://amzn.to/..." required />
+          </div>
+
+          <div class="field">
+            <label for="p-image">Product photo</label>
+            <input type="file" id="p-image" name="image" accept="image/*" />
+            <img id="image-preview" style="display:none;margin-top:10px;width:90px;height:90px;border-radius:10px;object-fit:cover;" />
+          </div>
+
+          <div class="ai-assist-row">
+            <button type="button" id="ai-generate" class="btn btn-outline btn-sm">✨ Generate with AI</button>
+            <span class="field-hint">Double-checks the category and writes a detailed description + alt text from the name.</span>
+          </div>
+
+          <div class="field">
+            <label for="p-alt">Image alt text</label>
+            <input type="text" id="p-alt" name="altText" placeholder="Describe the photo for screen readers" />
+          </div>
+
+          <div class="field">
+            <label for="p-desc">Description</label>
+            <textarea id="p-desc" name="description" placeholder="A couple of sentences on why you love it"></textarea>
+          </div>
+
+          <div style="display:flex;gap:10px;">
+            <button type="submit" class="btn btn-gold" style="flex:1;">Save product</button>
+            <button type="button" id="cancel-edit" class="btn btn-ghost" style="display:none;">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="admin-panel">
+        <h2>Your products</h2>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>Photo</th><th>Name</th><th>Category</th><th>Price</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="product-rows">
+              <tr><td colspan="5">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { wireNav } from "./js/auth.js";
+    wireNav();
+  </script>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

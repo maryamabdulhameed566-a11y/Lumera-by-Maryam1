@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luméra by Maryam — Beauty, Skincare &amp; Self-Care Picks</title>
+  <meta name="description" content="Curated beauty, skincare, and self-care favorites, handpicked by Maryam. Shop our picks on Amazon." />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Lora:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="disclosure">
+    <strong>Affiliate disclosure:</strong> As an Amazon Associate, Luméra by Maryam earns from qualifying purchases at no extra cost to you.
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Luméra by Maryam logo" />
+        <span class="brand-text">
+          <span class="name">Luméra</span><br/>
+          <span class="by">BY MARYAM</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="admin.html" data-nav-admin style="display:none;">Admin</a>
+        <span data-nav-user style="display:none; color:var(--ink-soft); font-family:var(--font-label); font-size:0.82rem;">
+          Hi, <span data-user-name></span>
+        </span>
+        <a href="#" data-nav-user data-logout style="display:none;">Log out</a>
+        <a href="login.html" data-nav-guest>Log in</a>
+        <a class="btn btn-gold btn-sm" href="register.html" data-nav-guest>Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="label-caps hero-eyebrow">Beauty · Skincare · Self-Care</p>
+      <h1>Glow rituals, <em>handpicked</em> by Maryam.</h1>
+      <p class="lede">Every product here earned its spot — tried, loved, and worth sharing. Browse the edit, then shop straight through to Amazon.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#shop">Shop the edit</a>
+        <a class="btn btn-outline" href="register.html" data-nav-guest>Create an account</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="dotcircle"></div>
+      <div class="ring"></div>
+      <div class="ring r2"></div>
+      <img class="portrait" src="assets/logo.png" alt="Luméra by Maryam brand mark" />
+    </div>
+  </section>
+
+  <div class="pillars">
+    <span>Beauty</span><span class="dot">•</span><span>Skincare</span><span class="dot">•</span><span>Self-Care</span>
+  </div>
+
+  <section class="section" id="shop">
+    <div class="section-head">
+      <p class="label-caps">The Edit</p>
+      <h2>Today's favorites</h2>
+    </div>
+    <div class="filter-row" id="filter-row">
+      <button class="chip active" data-category="All">All</button>
+      <button class="chip" data-category="Beauty">Beauty</button>
+      <button class="chip" data-category="Skincare">Skincare</button>
+      <button class="chip" data-category="Self-Care">Self-Care</button>
+      <button class="chip" data-category="Electronics">Electronics</button>
+      <button class="chip" data-category="Home">Home</button>
+      <button class="chip" data-category="Fashion">Fashion</button>
+      <button class="chip" data-category="Other">Other</button>
+    </div>
+    <div class="product-grid" id="product-grid">
+      <div class="empty-state">
+        <p class="label-caps">Loading the edit…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-head">
+      <p class="label-caps">By Maryam</p>
+      <h2>The face behind the edit</h2>
+    </div>
+    <div class="bio-grid">
+      <!-- Swap assets/logo.png for a real photo of you whenever you have one ready -->
+      <div class="bio-portrait">
+        <div class="ring"></div>
+        <div class="ring r2"></div>
+        <img src="assets/logo.png" alt="Maryam, founder of Luméra" />
+      </div>
+      <div class="bio-copy">
+        <p>I started Luméra because my group chats were already full of "wait, what's that serum?" messages.</p>
+        <p>
+          I'm Maryam — equal parts skincare obsessive and hopeless self-care enthusiast. Over the years I've
+          tried more products than I'd like to admit, kept what actually earned its place on my shelf, and
+          quietly let the rest go. This space is that shelf, made public: the things I reach for on slow
+          Sunday mornings, the serum that finally calmed my skin down, the little rituals that make an
+          ordinary evening feel like something.
+        </p>
+        <p>
+          Every product here is something I've used myself or researched closely before recommending. I link
+          out to Amazon so you can read real reviews, compare, and check the current price before you buy —
+          no pressure, just an honest edit.
+        </p>
+        <p class="bio-signoff">With love, Maryam ✨</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="section-head">
+      <p class="label-caps">Good to know</p>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How does shopping here actually work?</summary>
+        <p>Every "Shop on Amazon" button takes you straight to that product's real Amazon listing in a new tab. You check out on Amazon, the way you always do — Luméra never touches your payment details.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I pay anything extra by clicking your links?</summary>
+        <p>No — prices are exactly what you'd pay going directly to Amazon. As an Amazon Associate, Luméra earns a small commission on qualifying purchases, at no extra cost to you.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do you choose what to feature?</summary>
+        <p>Everything here is something I've personally used or researched in depth — nothing is paid placement. If I wouldn't recommend it to a friend, it doesn't make the edit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>I need to return or track something I bought — can you help?</summary>
+        <p>Since checkout happens on Amazon, returns, order tracking, and shipping questions are all handled through your Amazon account's order history, not through Luméra. Amazon's own customer service can help directly with any of that.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is the chat assistant a real person?</summary>
+        <p>It's an AI assistant trained on this shop's products and policies — not Maryam typing live. It's great for quick questions about ingredients or finding the right product; for anything personal, feel free to reach out directly.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I suggest a product for the edit?</summary>
+        <p>Always — message the chat assistant with your suggestion, or reach out through your usual contact channel. I read every one.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Luméra by Maryam logo" />
+        <span class="brand-text">
+          <span class="name">Luméra</span><br/>
+          <span class="by">BY MARYAM</span>
+        </span>
+      </a>
+      <div class="divider-sprig"><span class="heart">♥</span></div>
+      <p class="legal">
+        Luméra by Maryam is a participant in the Amazon Services LLC Associates Program, an affiliate
+        advertising program designed to provide a means for sites to earn advertising fees by linking to
+        Amazon.com. Prices and availability shown on Amazon are accurate as of the time of purchase and are
+        subject to change.
+      </p>
+      <div class="social-row">
+        <a class="social-icon" href="https://www.tiktok.com/@m.1ryam7?_r=1&amp;_t=ZS-97bBs3uUGIy" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M16.6 5.82c-.94-.65-1.6-1.65-1.77-2.82h-3.13v13.4c0 1.55-1.26 2.8-2.8 2.8a2.8 2.8 0 0 1 0-5.6c.27 0 .53.04.78.1V10.6a6 6 0 0 0-.78-.05 6 6 0 1 0 6 6V9.4a8.16 8.16 0 0 0 4.7 1.5V7.77a4.8 4.8 0 0 1-2.99-1.95z"/></svg>
+        </a>
+        <a class="social-icon" href="https://www.snapchat.com/add/m.1rym4?share_id=TiZ9tsmLAJo&amp;locale=en-AE" target="_blank" rel="noopener noreferrer" aria-label="Snapchat">
+          <svg viewBox="0 0 24 24"><path d="M12 2c2.9 0 5.1 2.3 5.1 5.4 0 1 0 2 .1 2.6.6.2 1.4.1 1.8 0 .4-.1.9.1 1 .5.1.4-.1.8-.5 1-.4.2-1 .5-1 .9 0 .3.3.7 1 1.2.5.4.4 1.1-.2 1.3-.6.2-1.4.4-1.7.7-.2.2-.1.6 0 .9.1.4-.2.8-.7.8-.7 0-1.6-.1-2.2.3-.6.4-1.2 1.4-2.7 1.4s-2.1-1-2.7-1.4c-.6-.4-1.5-.3-2.2-.3-.5 0-.8-.4-.7-.8.1-.3.2-.7 0-.9-.3-.3-1.1-.5-1.7-.7-.6-.2-.7-.9-.2-1.3.7-.5 1-.9 1-1.2 0-.4-.6-.7-1-.9-.4-.2-.6-.6-.5-1 .1-.4.6-.6 1-.5.4.1 1.2.2 1.8 0 .1-.6.1-1.6.1-2.6C6.9 4.3 9.1 2 12 2z"/></svg>
+        </a>
+        <a class="social-icon" href="https://pin.it/4sDb19R60" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.68 7.85 6.44 9.25-.09-.78-.17-1.99.04-2.85.19-.78 1.21-4.96 1.21-4.96s-.31-.62-.31-1.53c0-1.44.83-2.51 1.87-2.51.88 0 1.31.66 1.31 1.46 0 .89-.57 2.21-.86 3.44-.24 1.03.52 1.87 1.54 1.87 1.85 0 3.09-2.38 3.09-5.2 0-2.14-1.44-3.75-4.06-3.75-2.96 0-4.8 2.21-4.8 4.68 0 .85.25 1.45.64 1.91.18.21.2.3.14.55-.05.18-.16.64-.21.82-.07.27-.27.36-.5.26-1.39-.57-2.04-2.08-2.04-3.79 0-2.82 2.38-6.2 7.09-6.2 3.79 0 6.28 2.74 6.28 5.68 0 3.89-2.16 6.79-5.35 6.79-1.07 0-2.08-.59-2.42-1.27 0 0-.58 2.32-.7 2.77-.21.8-.62 1.61-1 2.23.9.27 1.85.42 2.84.42 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+        </a>
+      </div>
+      <p class="copyright">© <span id="year"></span> Luméra by Maryam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { wireNav } from "./js/auth.js";
+    import { listenProducts, renderProductGrid } from "./js/products.js";
+    import { initChatWidget } from "./js/chat-widget.js";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    wireNav();
+    initChatWidget();
+
+    let products = [];
+    let activeCategory = "All";
+    const grid = document.getElementById("product-grid");
+
+    listenProducts((items) => {
+      products = items;
+      renderProductGrid(grid, products, activeCategory);
+    });
+
+    document.querySelectorAll("#filter-row .chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        document.querySelectorAll("#filter-row .chip").forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        activeCategory = chip.dataset.category;
+        renderProductGrid(grid, products, activeCategory);
+      });
+    });
+  </script>
+</body>
+</html>
